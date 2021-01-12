@@ -1,0 +1,41 @@
+title 0.4: uusi muistiinpano / Heikki Kumpare
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+palvelin->selain: HTML koodi
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+palvelin->selain: main.js
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin->selain: data.json
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+palvelin->selain: favicon.ico
+
+note over selain:
+selain hakee HTML ja JS -koodin ja suorittaa JS -koodin.
+JS -koodissa suoritetaan JSON -tiedoston haku. JSON parsitaan JS -koodissa
+ja esitettään sivulla. 
+
+Favicon ico on selaimen tabissa esitettävä pieni kuvake 
+(oletuksena Chromessa harmaa maapallo)
+note over 
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over selain:
+Napin painaminen aiheuttaa POST -kutsun, jonka mukana lähetetään sivulla olevan
+input -kentän sisältö. Kentän sisältö tallennetaan palvelimelle (esim. tietokantaan)
+
+Postin jälkeen selain lataa uudelleen sivun.
+note over 
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+palvelin->selain: HTML koodi
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+palvelin->selain: main.js
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin->selain: data.json
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+palvelin->selain: favicon.ico
+
+note over selain:
+sivulla esitetään notes -listan päivitetty sisältö.
+note over 

@@ -1,0 +1,12 @@
+title 0.6: Uusi muistiinpano / Heikki Kumpare
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over selain:
+Napin painaminen aiheuttaa POST -kutsun, jonka mukana lähetetään sivulla olevan
+input -kentän sisältö. Kentän sisältö tallennetaan palvelimelle (esim. tietokantaan)
+
+Postin jälkeen selain lataa uudelleen sivun.
+
+Erona tavalliseen toteutukseen SPA:ssa POST -metodi on yksinkertaisempi ja nopeampi.
+note over 
